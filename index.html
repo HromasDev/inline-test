@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./scripts/swiper/swiper-element-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="header__link selected">ОПИСАНИЕ</a>
+            <a href="reviews.html" class="header__link">ОТЗЫВЫ</a>
+            <a href="where.html" class="header__link">ОТКУДА?</a>
+        </div>
+
+        <section>
+            <p>
+                Томаты на ветке красные (помидоры) - более плотные, яркие и ароматные по сравнению с обычными. Они
+                славятся
+                низкой калорийностью и высоким содержанием витаминов, клетчатки, пектина и минеральных веществ. В них
+                содержатся
+                также каротиноиды, кислоты и мощный антиоксидант ликопин.
+            </p>
+        </section>
+
+        <section>
+            <p>
+                Помидор - незаменимый продукт в мировой кулинарии. Он - основа многочисленных соусов, маринадов,
+                кетчупа,
+                испанского холодного супа Гаспачо или итальянской закуски Капрезе. С ним делают салаты, его тушат, солят
+                и
+                консервируют. Помидоры на веточке особенно красиво смотрятся в запеченном виде.
+            </p>
+        </section>
+
+        <section class="properties">
+            <div class="grid">
+                <div class="grid__item">
+                    <h4>ХАРАКТЕРИСТИКИ</h4>
+                    <div class="grid__row row">
+                        <span class="properties__span row__item">Страна</span>
+                        <span class="properties__span row__item right">Россия</span>
+                    </div>
+                    <div class="grid__row row">
+                        <span class="properties__span row__item">Поставщик</span>
+                        <span class="properties__span row__item right">Фермеры: Наталья и Юрий Лейшан</span>
+                    </div>
+                    <div class="grid__row row">
+                        <span class="properties__span row__item">Тип упаковки</span>
+                        <span class="properties__span row__item right">Крафтовый пакет</span>
+                    </div>
+                    <div class="grid__row row">
+                        <span class="properties__span row__item">Сертификаты качества</span>
+                        <span class="properties__span row__item right">В наличии</span>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <h4>ПИЩЕВАЯ ЦЕННОСТЬ НА 100Г</h4>
+                    <div class="grid__row row">
+                        <span class="properties__span row__item">Энергетическая ценность</span>
+                        <span class="properties__span row__item right">18 кКал</span>
+                    </div>
+                    <div class="grid__row row">
+                        <span class="properties__span row__item">Белки</span>
+                        <span class="properties__span row__item right">0.9 г</span>
+                    </div>
+                    <div class="grid__row row">
+                        <span class="properties__span row__item">Жиры</span>
+                        <span class="properties__span row__item right">0.2 г</span>
+                    </div>
+                    <div class="grid__row row">
+                        <span class="properties__span row__item">Углеводы</span>
+                        <span class="properties__span row__item right">3.9 г</span>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <h4>УСЛОВИЯ ХРАНЕНИЯ</h4>
+                    <div class="grid__row row">
+                        <span class="properties__span row__item">Срок хранения</span>
+                        <span class="properties__span row__item right">7 дней</span>
+                    </div>
+                    <div class="grid__row row">
+                        <span class="properties__span row__item">Температура хранения</span>
+                        <span class="properties__span row__item right">от 3 ° до 7 °</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <h2>С этим товаром покупают</h2>
+            <swiper-container loop="true" breakpoints='{
+                "320": {
+                    "slidesPerView": 1.2,
+                    "spaceBetween": 5
+                },
+                "465": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 5
+                },
+                "640": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 5
+                },
+                "840": {
+                    "slidesPerView": 4,
+                    "spaceBetween": 10
+                }
+            }'>
+                <swiper-slide>
+                    <div class="card">
+                        <div class="card__image">
+                            <img class="card__image-favorite" src="imgs/icon_favorite.svg" alt="" srcset="">
+                            <img class="card__image-img" src="imgs/products/1.webp" alt="">
+                        </div>
+                        <div class="card__description">
+                            <h4 class="card__title">Молоко 3,2 %</h4>
+                            <div class="card__vendor">от Вадима Рошки</div>
+                            <div class="card__description__row">
+                                <div class="row">
+                                    <div class="card__price">95 ₽</div>
+                                    <div class="card__weight">/ 0,93 л</div>
+                                </div>
+                                <button class="card__button">
+                                    <span class="card__button-text">В корзину</span>
+                                    <img class="card__button-img" src="imgs/shopping-cart.svg" alt="" srcset="">
+                                </button>
+                            </div>
+                            <div class="card__rate">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+                </swiper-slide>
+
+                <swiper-slide>
+                    <div class="card">
+                        <div class="card__image">
+                            <img class="card__image-favorite" src="imgs/icon_favorite.svg" alt="" srcset="">
+                            <img class="card__image-img" src="imgs/products/2.webp" alt="">
+                        </div>
+                        <div class="card__description">
+                            <h4 class="card__title">Хлеб пшеничный</h4>
+                            <div class="card__vendor">от Дарьи и Марии</div>
+                            <div class="card__description__row">
+                                <div class="row">
+                                    <div class="card__price">95 ₽</div>
+                                    <div class="card__weight">/ 930 г </div>
+                                </div>
+                                <button class="card__button">
+                                    <span class="card__button-text">В корзину</span>
+                                    <img class="card__button-img" src="imgs/shopping-cart.svg" alt="" srcset="">
+                                </button>
+                            </div>
+                            <div class="card__rate">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+                </swiper-slide>
+
+                <swiper-slide>
+                    <div class="card">
+                        <div class="card__image">
+                            <img class="card__image-favorite" src="imgs/icon_favorite.svg" alt="" srcset="">
+                            <img class="card__image-img" src="imgs/products/3.webp" alt="">
+                        </div>
+                        <div class="card__description">
+                            <h4 class="card__title">Яйца куриные</h4>
+                            <div class="card__vendor">от Евгения Рошаль</div>
+                            <div class="card__description__row">
+                                <div class="row">
+                                    <div class="card__price">120 ₽</div>
+                                    <div class="card__weight">/ 10 шт</div>
+                                </div>
+                                <button class="card__button">
+                                    <span class="card__button-text">В корзину</span>
+                                    <img class="card__button-img" src="imgs/shopping-cart.svg" alt="" srcset="">
+                                </button>
+                            </div>
+                            <div class="card__rate">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+                </swiper-slide>
+
+                <swiper-slide>
+                    <div class="card">
+                        <div class="card__image">
+                            <img class="card__image-favorite" src="imgs/icon_favorite.svg" alt="" srcset="">
+                            <img class="card__image-img" src="imgs/products/4.webp" alt="">
+                        </div>
+                        <div class="card__description">
+                            <h4 class="card__title">Масло сливочное 82 %</h4>
+                            <div class="card__vendor">от Вадима Рошки</div>
+                            <div class="card__description__row">
+                                <div class="row">
+                                    <div class="card__price">290 ₽</div>
+                                    <div class="card__weight">/ 250 г </div>
+                                </div>
+                                <button class="card__button">
+                                    <span class="card__button-text">В корзину</span>
+                                    <img class="card__button-img" src="imgs/shopping-cart.svg" alt="" srcset="">
+                                </button>
+                            </div>
+                            <div class="card__rate">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                                <img class="card__rate-img" src="imgs/star_icon.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+                </swiper-slide>
+            </swiper-container>
+
+        </section>
+</body>
+
+</html>

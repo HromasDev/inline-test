@@ -1,0 +1,373 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #429F3A;
+    --background-color: white;
+    --text-color: #444444;
+    --text-color-light: #B2B2B2;
+    --text-color-contrast: black;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+section {
+    padding: 0 0 20px 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    padding: 0 0 10px 0;
+    font-weight: 500;
+}
+
+img {
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+}
+
+.btn--primary {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.btn--secondary {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color-light);
+}
+
+.container {
+    max-width: 960px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.header {
+    margin: 0 0 20px 0;
+    display: flex;
+    font-weight: 500;
+    justify-content: center;
+    gap: 80px;
+    border-bottom: 1px solid var(--text-color-light);
+}
+
+.header__link {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    padding: 15px 0;
+}
+
+.header__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 5px;
+    background-color: green;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+/* Анимация для линии */
+@keyframes lineAnimation {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.header__link.selected::after {
+    animation: lineAnimation 0.3s forwards;
+}
+
+.header__link:hover::after {
+    transform: scaleX(0);
+}
+
+.header__link {
+    color: var(--text-color);
+}
+
+.header__link:hover {
+    color: var(--text-color-contrast);
+}
+
+.selected {
+    color: var(--text-color-contrast);
+}
+
+.photo__title {
+    display: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.properties .grid {
+    gap: 50px;
+}
+
+.grid__item {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.grid__row {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--text-color-light);
+}
+
+.right {
+    text-align: right;
+}
+
+.properties__span {
+    font-size: 12px;
+}
+
+.card {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #DEDEDE;
+    border-radius: 15px;
+}
+
+.card__description {
+    padding: 10px 0 10px 10px;
+}
+
+.card__description__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__title {
+    padding: 0;
+    font-weight: 600;
+}
+
+.card__vendor {
+    padding: 10px 0 20px 0;
+}
+
+.card__price {
+    padding: 0 5px 0 0;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card__image-favorite {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20px;
+}
+
+.card__button {
+    background-color: var(--main-color);
+    width: 70px;
+    border-radius: 25px 0 0 25px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.card__button-text {
+    display: none;
+}
+
+.card__vendor,
+.card__weight {
+    font-size: 12px;
+    color: var(--text-color-light);
+}
+
+.card__rate {
+    display: flex;
+    gap: 5px;
+    padding: 5px 0;
+}
+
+.card__rate-img {
+    width: 15px;
+}
+
+.card__button-img {
+    width: 20px;
+    margin: 0 auto;
+}
+
+.card__button:hover {
+    filter: brightness(110%);
+}
+
+.card__image-favorite:hover {
+    filter: invert(30%) sepia(100%) saturate(500%) hue-rotate(10deg) brightness(100%);
+}
+
+.reviews {
+    max-width: 550px;
+}
+
+.photo__button {
+    margin: 10px;
+    width: 100%;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .photo__title {
+        display: block;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        /* На маленьких экранах будет один столбец */
+    }
+}
+
+@media (max-width: 650px) {
+    .grid {
+        grid-template-columns: 1fr;
+        /* На маленьких экранах будет один столбец */
+    }
+}
+
+@media (max-width: 465px) {
+    .card__image-favorite {
+        display: none;
+    }
+    swiper-slide {
+        background: #fff; /* Цвет фона слайда */
+        border-radius: 15px; /* Закругление углов (по желанию) */
+        margin: 10px 5px;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05),
+                    0 -5px 5px rgba(0, 0, 0, 0.05),
+                    -5px 0 5px rgba(0, 0, 0, 0.05),
+                    5px 0 5px rgba(0, 0, 0, 0.05);
+        /* Настройка тени */
+    }
+
+    .card__vendor,
+    .card__weight {
+        color: var(--text-color-contrast);
+    }
+
+    .card__description__row {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .card__rate {
+        display: none;
+    }
+
+    .card__image-img {
+        border-radius: 15px;
+        width: 100px;
+    }
+
+    .card__description {
+        width: 100%;
+    }
+
+    .card__button-text {
+        display: block;
+    }
+
+    .card__button {
+        width: 100%;
+        border: 1px solid #DEDEDE;
+        padding: 15px;
+        font-weight: 600;
+        margin: 10px 0 0 0;
+        border-radius: 5px;
+        color: var(--main-color);
+        background-color: var(--background-color);
+    }
+
+    .card__button-img {
+        margin: 0 0 0 auto;
+        filter: invert(44%) sepia(10%) saturate(2882%) hue-rotate(68deg) brightness(115%) contrast(84%);
+    }
+
+    .card__button:hover {
+        background-color: var(--main-color);
+        color: white;
+    }
+
+    .card {
+        border: none;
+        padding: 20px 20px 5px 5px;
+        flex-direction: row;
+    }
+
+    .header {
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .btn--primary {
+        display: flex;
+        margin: 0 auto;
+    }
+}
